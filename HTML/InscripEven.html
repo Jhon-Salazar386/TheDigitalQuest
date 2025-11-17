@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripciones</title>
+    <link rel="stylesheet" href="../CSS/Formularios.css">
+</head>
+<body>
+    <header>
+        <img src="../IMG/LogoRTS.png" alt="LogoRTS" id="LogoRTS">
+        <nav>
+            <a href="Calendario.html" id="regreso">Volver al calendario</a>
+        </nav>
+    </header>
+    <main>
+        <form action="post"><br>
+            <h2>Inscribete a una edicion</h2>
+            <label for="IDedicion">Codigo de edición</label>
+            <input type="text" name="IDedicion" id="IDedicion" placeholder="Ingresa codigo de edición" required><br>
+            <label for="usuario">Usuario</label>
+            <input type="text" name="usuario" id="usuario" placeholder="Ingresa tu nombre de usuario" required><br>
+            <label for="gender">Genero</label>
+            <select name="gender" id="gender">
+                <option value="Male">Hombre</option>
+                <option value="Female">Mujer</option>
+                <option value="Others">Otros</option>
+            </select><br>
+            <label for="fechanac">F.Nacimiento</label>
+            <input type="date" name="fechanac" id="fechanac"><br>
+            <label for="ciudad">Ciudad</label>
+            <input type="text" name="ciudad" id="ciudad"><br>
+            <label for="dir">Direccion</label>
+            <input type="text" name="dir" id="dir"><br>
+            <input type="submit" class="botones">
+            <input type="reset" class="botones"><br>
+        </form>  
+    </main>
+</body>
+</html>
