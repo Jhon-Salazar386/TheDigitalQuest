@@ -1,6 +1,5 @@
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -80,7 +79,6 @@ td.vacio {
   cursor: default;
 }
 
-td:has(text*="carrera"),
 td.carrera,
 td[data-evento="carrera"]{
   background-color: #A7D8FF;
@@ -88,11 +86,6 @@ td[data-evento="carrera"]{
   font-weight: 700;
   cursor: pointer;
   box-shadow: inset 0 0 6px #27A2E1;
-}
-
-td:not(.vacio):hover {
-  background-color: #D7EDFF;
-  cursor: pointer;
 }
 
 nav {
