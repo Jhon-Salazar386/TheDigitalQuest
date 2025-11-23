@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscripciones</title>
     <link rel="stylesheet" href="../CSS/Formularios.css">
+    <script>
+        function alerta(){
+            alert("Para poder incribirte, necesitas una cuenta de usuario")
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -16,24 +21,24 @@
     <main>
         <form action="post"><br>
             <h2>Inscribete a una edicion</h2>
-            <label for="IDedicion">Codigo de edición</label>
-            <input type="text" name="IDedicion" id="IDedicion" placeholder="Ingresa codigo de edición" required><br>
+            <label for="evento">Evento</label>
+            <Select name="evento" id="evento">
+                <option>Trail running(7/12/25)</option>
+                <option>Maraton 10km(14/12/25)</option>
+                <option>Carrera BMX(17/12/25)</option>
+                <option>Trail running(19/12/25)</option>
+            </Select>
             <label for="usuario">Usuario</label>
-            <input type="text" name="usuario" id="usuario" placeholder="Ingresa tu nombre de usuario" required><br>
-            <label for="gender">Genero</label>
-            <select name="gender" id="gender">
-                <option value="Male">Hombre</option>
-                <option value="Female">Mujer</option>
-                <option value="Others">Otros</option>
-            </select><br>
-            <label for="fechanac">F.Nacimiento</label>
-            <input type="date" name="fechanac" id="fechanac"><br>
+            <input type="text" name="usuario" id="usuario" placeholder="Ingresa tu nombre como deportista" required>
+            <label for="ConfirmIncripcion">Verificacion</label>
+            <Input type="text" name="ConfirmIncripcion" id="ConfirmIncripcion" placeholder="Ingresa tu email/telefono de confirmacion" required>
+            
+
             <label for="ciudad">Ciudad</label>
-            <input type="text" name="ciudad" id="ciudad"><br>
-            <label for="dir">Direccion</label>
-            <input type="text" name="dir" id="dir"><br>
-            <input type="submit" class="botones">
+            <input type="text" name="ciudad" id="ciudad" placeholder="Ingresa tu Ciudad de nacimiento (Campo opcional)"><br>
+            <input type="submit" class="botones" onclick="alerta()">
             <input type="reset" class="botones"><br>
+            <a href="Registro.html">¿Crear cuenta?</a>
         </form>  
     </main>
 </body>

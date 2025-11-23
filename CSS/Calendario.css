@@ -30,26 +30,19 @@ header {
 }
 
 main {
-  width: 100%;
   width: 600px;
   background-color: #fff;
   padding: 25px 20px;
 }
 
-form hr {
-  border-bottom: 2px solid #27A2E1;
-  margin-bottom: 20px;
-}
-
 table {
   width: 100%;
-  border-collapse: collapse;
   text-align: center;
 }
 
 caption {
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 25px;
   margin-bottom: 15px;
   color: #004C8C;
 }
@@ -59,33 +52,19 @@ th {
   color: white;
   padding: 10px 0;
   font-weight: 700;
-  border-radius: 6px 6px 0 0;
-  user-select: none;
 }
 
 td {
   border: 1px solid #ddd;
   padding: 15px 10px;
-  font-size: 1vw;
   color: #333;
-  min-height: 50px;
-  transition: background-color 0.3s ease;
   border-radius: 4px;
 }
 
 td.vacio {
-  background-color: transparent;
+  background-color: rgb(236, 236, 236);
   border: none;
   cursor: default;
-}
-
-td.carrera,
-td[data-evento="carrera"]{
-  background-color: #A7D8FF;
-  color: #004C8C;
-  font-weight: 700;
-  cursor: pointer;
-  box-shadow: inset 0 0 6px #27A2E1;
 }
 
 nav {
@@ -94,7 +73,6 @@ nav {
   gap: 20px;
   justify-content: center;
   width: 100%;
-  max-width: 600px;
 }
 
 .buttons {
@@ -104,7 +82,6 @@ nav {
   text-decoration: none;
   border-radius: 8px;
   font-weight: 700;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
 }
 
@@ -112,7 +89,30 @@ nav {
   background-color: #27A2E1;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 650px) {
+  header img,h1{
+    padding: 1vw;
+  }
+  
+  main {
+    padding: 15px 10px;
+    overflow: scroll;
+  }
+
+  section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  caption{
+    width: 100%;
+  }
+
+  table{
+    width: 450px;
+  }
+
   td, th {
     padding: 10px 5px;
     font-size: 3vw;
@@ -121,10 +121,5 @@ nav {
 
   .buttons {
     font-size: 0.9rem;
-  }
-
-  main {
-    padding: 15px 10px;
-    overflow: scroll;
   }
 }

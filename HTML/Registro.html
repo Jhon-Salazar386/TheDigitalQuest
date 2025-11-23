@@ -14,21 +14,28 @@
             <a href="Index.html" id="getback">Volver a la pagina principal</a>
         </nav>
     </header>
-
-    <form action="Post">
-        <h2>Registro de cuenta</h2>
-        <label for="usuario">Nombre</label>
-        <input type="text" class="inputs" placeholder="ingresa tu nombre" required name="usuario" id="usuario"><br>
-        <label for="contra">Contraseña</label>
-        <input type="password" class="inputs" placeholder="Ingresa una contraseña" required name="contra" id="contra"><br>
-        <label for="confirmcontra">Comfirmar contraseña</label>
-        <input type="password" class="inputs" placeholder="Ingresa una contraseña" required name="confirmcontra" id="confirmcontra"><br>
-        <label for="fecha">Fecha de nacimiento</label>
-        <input type="date" required class="inputs" name="fecha" id="fecha"><br>
-        <label for="Email">Correo electronico</label>
-        <input type="text" class="inputs" placeholder="Ingresa tu email" name="Email" id="Email"><br>
-        <input type="submit" class="botones">
-        <input type="reset" class="botones">
-    </form>
+    <main>
+        <form action="Post">
+            <h2>Registro de cuenta</h2>
+            <label for="usuario">Nombre</label>
+            <input type="text" class="inputs" placeholder="ingresa tu nombre" required name="usuario" id="usuario"><br>
+            <label for="contra">Contraseña</label>
+            <input type="password" class="inputs" placeholder="Ingresa una contraseña" required name="contra" id="contra"><br>
+            <label for="confirmcontra">Comfirmar contraseña</label>
+            <input type="password" class="inputs" placeholder="Ingresa una contraseña" required name="confirmcontra" id="confirmcontra"><br>
+            <label for="fecha">Fecha de nacimiento</label>
+            <input type="date" required class="inputs" name="fecha" id="fecha"><br>
+            <label for="gender">Genero</label>
+            <select name="gender" id="gender">
+                <option value="Male">Hombre</option>
+                <option value="Female">Mujer</option>
+                <option value="Others">Otros</option>
+            </select><br>
+            <label for="Email">Correo electronico</label>
+            <input type="text" class="inputs" placeholder="Ingresa tu email" name="Email" id="Email"><br>
+            <input type="submit" class="botones">
+            <input type="reset" class="botones">
+        </form>
+    </main>
 </body>
 </html>
