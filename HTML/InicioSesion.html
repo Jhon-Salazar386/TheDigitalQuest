@@ -4,8 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InicioSesion</title>
-    <link rel="icon" href="../IMG/Icon.png" type="imgage/x-icon">
+    <link rel="icon" href="../IMG/Icon.png" type="image/png">
     <link rel="stylesheet" href="../CSS/Formularios.css">
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+
+            const usuario = document.getElementById("usuario");
+            const contraseña = document.getElementById("contra");
+            const iniciar = document.getElementById("iniciarSesion");
+
+            iniciar.addEventListener("click", function(){
+                let valorUsuario = usuario.value.trim();
+                let valorContraseña = contraseña.value.trim();
+                let usuarioReg = localStorage.getItem("Usuario");
+                let contraseñaReg = localStorage.getItem("Contraseña");
+
+
+                if(valorUsuario !== "" && valorContraseña !== ""){
+                    if(valorUsuario === usuarioReg && valorContraseña === contraseñaReg){
+                        alert("Logueado exitosamente");
+                        window.location.href = "Index.html";
+                    } else {
+                        alert("Algo anda mal")
+                    }
+
+                } else {
+                    alert("El campo no puede estar vacio")
+                }
+            })
+        })
+    </script>
+    
 </head>
 <body>
     <header>
@@ -15,16 +45,36 @@
         </nav>
     </header>
     <main>
-        <form action="Post">
-            <h2>Inicio de sesión</h2>
-            <label for="usuario">Nombre/Gmail</label>
-            <input type="text" class="inputs" placeholder="ingresa tu nombre de usuaio o gmail" required name="usuario" id="usuario"><br>
-            <label for="contra">Contraseña</label>
-            <input type="password" class="inputs" placeholder="Ingresa una contraseña" required name="contra" id="contra"><br>
-            <input type="submit" class="botones" value="Iniciar Sesion">
-            <input type="reset" class="botones">
-            <a href="Registro.html" id="crear">¿Crear una cuenta?</a>
-        </form>
+        <section>
+            <form action="Post">
+                <h1>Inicio de sesión</h1>
+                <label for="usuario">Nombre/Gmail</label>
+                <input type="text" class="inputs" placeholder="ingresa tu nombre de usuaio o gmail" required name="usuario" id="usuario"><br>
+                <label for="contra">Contraseña</label>
+                <input type="password" class="inputs" placeholder="Ingresa una contraseña" required name="contra" id="contra"><br>
+                <input type="button" class="botones" value="Iniciar Sesion" id="iniciarSesion">
+                <input type="reset" class="botones">
+                <a href="Registro.html" id="crearCuenta">¿Crear una cuenta?</a>
+            </form>
+        </section>
     </main>
+    <footer>
+        <div>
+            <p><strong>Plataforma para gestionar eventos deportivos</strong></p>
+        </div>
+        <nav class="footer-nav">
+            <ul>
+                <li class="footer-title">Redes sociales:</li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+            </ul>
+            <ul>
+                <li class="footer-title">¿Necesitas ayuda?:</li>
+                <li><a href="#">Contáctanos</a></li>
+                <li><a href="#">Guía para organizadores</a></li>
+            </ul>
+        </nav>
+        <img src="../IMG/LogoRTS.png" alt="Logo RocktheSport">
+    </footer>
 </body>
 </html>

@@ -15,9 +15,9 @@ body {
 }
 
 header {
-  width: 100%;
-  background-color: #A7D8FF;
-  color: #004C8C;
+  width: 70%;
+  background: linear-gradient(90deg,rgba(118, 202, 219, 1) 0%, rgba(20, 16, 156, 1) 100%);
+  color: #dee2e6;
   padding: 15px 0;
   display: flex;
   justify-content: center;
@@ -31,17 +31,20 @@ header {
 
 main {
   width: 600px;
+  gap: 50px;
   background-color: #fff;
   padding: 25px 20px;
 }
 
 table {
+  margin-bottom: 40px;
   width: 100%;
   text-align: center;
 }
 
-caption {
+caption,h2 {
   font-weight: 700;
+  text-align: center;
   font-size: 25px;
   margin-bottom: 15px;
   color: #004C8C;
@@ -76,7 +79,7 @@ nav {
 }
 
 .buttons {
-  background-color: #004C8C;
+  background-color: #023a68;
   color: white;
   padding: 12px 25px;
   text-decoration: none;

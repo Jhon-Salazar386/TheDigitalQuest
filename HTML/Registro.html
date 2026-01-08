@@ -6,6 +6,32 @@
     <title>Registro</title>
     <link rel="icon" href="../IMG/Icon.png" type="imgage/x-icon">
     <link rel="stylesheet" href="../CSS/Formularios.css">
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            const usuario = document.getElementById("usuario");
+            const contra = document.getElementById("contra");
+            const confirmcontra = document.getElementById("confirmcontra");
+            const registrar = document.getElementById("registrarse");
+            
+            registrar.addEventListener("click", function(){
+
+                let user = usuario.value.trim();;
+                let password = contra.value.trim();;
+                let confirmPassword = confirmcontra.value.trim();;
+
+                if(user !== "" && password === confirmPassword){
+                    alert("Registro completo");
+                    localStorage.setItem("Usuario", user);
+                    localStorage.setItem("Contraseña", password);
+                    window.location.href = "InicioSesion.html";
+                } else {
+                    alert("Algo anda mal");
+                }
+            })
+        })  
+    </script>
+
 </head>
 <body>
     <header>
@@ -15,27 +41,47 @@
         </nav>
     </header>
     <main>
-        <form action="Post">
-            <h2>Registro de cuenta</h2>
-            <label for="usuario">Nombre</label>
-            <input type="text" class="inputs" placeholder="ingresa tu nombre" required name="usuario" id="usuario"><br>
-            <label for="contra">Contraseña</label>
-            <input type="password" class="inputs" placeholder="Ingresa una contraseña" required name="contra" id="contra"><br>
-            <label for="confirmcontra">Comfirmar contraseña</label>
-            <input type="password" class="inputs" placeholder="Ingresa una contraseña" required name="confirmcontra" id="confirmcontra"><br>
-            <label for="fecha">Fecha de nacimiento</label>
-            <input type="date" required class="inputs" name="fecha" id="fecha"><br>
-            <label for="gender">Genero</label>
-            <select name="gender" id="gender">
-                <option value="Male">Hombre</option>
-                <option value="Female">Mujer</option>
-                <option value="Others">Otros</option>
-            </select><br>
-            <label for="Email">Correo electronico</label>
-            <input type="text" class="inputs" placeholder="Ingresa tu email" name="Email" id="Email"><br>
-            <input type="submit" class="botones">
-            <input type="reset" class="botones">
-        </form>
+        <section>
+            <form action="Post">
+                <h1>Registro de cuenta</h1>
+                <label for="usuario">Nombre</label>
+                <input type="text" class="inputs" placeholder="ingresa tu nombre" required name="usuario" id="usuario"><br>
+                <label for="contra">Contraseña</label>
+                <input type="password" class="inputs" placeholder="Ingresa una contraseña" required name="contra" id="contra"><br>
+                <label for="confirmcontra">Comfirmar contraseña</label>
+                <input type="password" class="inputs" placeholder="Ingresa una contraseña" required name="confirmcontra" id="confirmcontra"><br>
+                <label for="fecha">Fecha de nacimiento</label>
+                <input type="date" required class="inputs" name="fecha" id="fecha"><br>
+                <label for="gender">Genero</label>
+                <select name="gender" id="gender">
+                    <option value="Male">Hombre</option>
+                    <option value="Female">Mujer</option>
+                    <option value="Others">Otros</option>
+                </select><br>
+                <label for="Email">Correo electronico</label>
+                <input type="text" class="inputs" placeholder="Ingresa tu email" name="Email" id="Email"><br>
+                <input type="button" class="botones" id="registrarse" value="Resgistrarse">
+                <input type="reset" class="botones" value="Limpiar">
+            </form>
+        </section>
     </main>
+    <footer>
+        <div>
+            <p><strong>Plataforma para gestionar eventos deportivos</strong></p>
+        </div>
+        <nav class="footer-nav">
+            <ul>
+                <li class="footer-title">Redes sociales:</li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+            </ul>
+            <ul>
+                <li class="footer-title">¿Necesitas ayuda?:</li>
+                <li><a href="#">Contáctanos</a></li>
+                <li><a href="#">Guía para organizadores</a></li>
+            </ul>
+        </nav>
+        <img src="../IMG/LogoRTS.png" alt="Logo RocktheSport">
+    </footer>
 </body>
 </html>

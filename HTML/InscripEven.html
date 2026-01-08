@@ -6,10 +6,12 @@
     <title>Inscripciones</title>
     <link rel="stylesheet" href="../CSS/Formularios.css">
     <script>
+
         function alerta(){
-            alert("Para poder incribirte, necesitas una cuenta de usuario")
+            alert("Para poder inscribirte, necesitas una cuenta de usuario")
         }
     </script>
+
 </head>
 <body>
     <header>
@@ -19,27 +21,47 @@
         </nav>
     </header>
     <main>
-        <form action="post"><br>
-            <h2>Inscribete a una edicion</h2>
-            <label for="evento">Evento</label>
-            <Select name="evento" id="evento">
-                <option>Trail running(7/12/25)</option>
-                <option>Maraton 10km(14/12/25)</option>
-                <option>Carrera BMX(17/12/25)</option>
-                <option>Trail running(19/12/25)</option>
-            </Select>
-            <label for="usuario">Usuario</label>
-            <input type="text" name="usuario" id="usuario" placeholder="Ingresa tu nombre como deportista" required>
-            <label for="ConfirmIncripcion">Verificacion</label>
-            <Input type="text" name="ConfirmIncripcion" id="ConfirmIncripcion" placeholder="Ingresa tu email/telefono de confirmacion" required>
-            
+        <section>
+            <form action="post"><br>
+                <h1>Inscribete a una edicion</h1>
+                <label for="evento">Evento</label>
+                <Select name="evento" id="evento">
+                    <option>Trail running(7/12/25)</option>
+                    <option>Maraton 10km(14/12/25)</option>
+                    <option>Carrera BMX(17/12/25)</option>
+                    <option>Trail running(19/12/25)</option>
+                </Select>
+                <label for="usuario">Usuario</label>
+                <input type="text" name="usuario" id="usuario" placeholder="Ingresa tu nombre como deportista" required>
+                <label for="ConfirmIncripcion">Verificacion</label>
+                <Input type="text" name="ConfirmIncripcion" id="ConfirmIncripcion" placeholder="Ingresa tu email/telefono de confirmacion" required>
+                
 
-            <label for="ciudad">Ciudad</label>
-            <input type="text" name="ciudad" id="ciudad" placeholder="Ingresa tu Ciudad de nacimiento (Campo opcional)"><br>
-            <input type="submit" class="botones" onclick="alerta()">
-            <input type="reset" class="botones"><br>
-            <a href="Registro.html">¿Crear cuenta?</a>
-        </form>  
+                <label for="ciudad">Ciudad</label>
+                <input type="text" name="ciudad" id="ciudad" placeholder="Ingresa tu Ciudad de nacimiento (Campo opcional)"><br>
+                <input type="submit" class="botones" onclick="alerta()">
+                <input type="reset" class="botones"><br>
+                <a href="Registro.html">¿Crear cuenta?</a>
+            </form>
+        </section>  
     </main>
+    <footer>
+        <div>
+            <p><strong>Plataforma para gestionar eventos deportivos</strong></p>
+        </div>
+        <nav class="footer-nav">
+            <ul>
+                <li class="footer-title">Redes sociales:</li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+            </ul>
+            <ul>
+                <li class="footer-title">¿Necesitas ayuda?:</li>
+                <li><a href="#">Contáctanos</a></li>
+                <li><a href="#">Guía para organizadores</a></li>
+            </ul>
+        </nav>
+        <img src="../IMG/LogoRTS.png" alt="Logo RocktheSport">
+    </footer>
 </body>
 </html>
