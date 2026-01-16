@@ -6,40 +6,61 @@
     <title>Inscripciones</title>
     <link rel="stylesheet" href="../CSS/Formularios.css">
     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("formInscripcion");
+            const usuarioInput = document.getElementById("usuario");
+            const contraseñaInput = document.getElementById("ConfirmIncripcion");
 
-        function alerta(){
-            alert("Para poder inscribirte, necesitas una cuenta de usuario")
-        }
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const user = usuarioInput.value.trim();
+                const password = contraseñaInput.value.trim();
+
+                const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+                const usuarioEncontrado = usuarios.find(u => 
+                    (u.nombre === user || u.email === user) && u.contraseña === password
+                );
+
+                if (usuarioEncontrado) {
+                    alert("Inscripcion emitida correctamente");
+                    localStorage.setItem("usuarioLogueado", JSON.stringify(usuarioEncontrado));
+                    window.location.href = "Index.html";
+                } else {
+                    alert("Algo anda mal");
+                }
+            });
+        });
     </script>
 
 </head>
 <body>
     <header>
-        <img src="../IMG/LogoRTS.png" alt="LogoRTS" id="LogoRTS">
+        <a href="Index.html"><img src="../IMG/LogoRTS.png" alt="LogoRTS" id="LogoRTS"></a>
         <nav>
-            <a href="Calendario.html" id="regreso">Volver al calendario</a>
+            <a href="Calendario.html" id="regreso">Calendario</a>
+            <a href="Index.html" id="regreso">inicio</a>
         </nav>
     </header>
     <main>
         <section>
-            <form action="post"><br>
+            <form action="post" id="formInscripcion"><br>
                 <h1>Inscribete a una edicion</h1>
                 <label for="evento">Evento</label>
                 <Select name="evento" id="evento">
-                    <option>Trail running(7/12/25)</option>
-                    <option>Maraton 10km(14/12/25)</option>
-                    <option>Carrera BMX(17/12/25)</option>
-                    <option>Trail running(19/12/25)</option>
+                    <option>Trail running(7/1/26)</option>
+                    <option>Maraton 10km(14/1/26)</option>
+                    <option>Carrera BMX(17/1/26)</option>
+                    <option>Trail running(19/1/26)</option>
                 </Select>
                 <label for="usuario">Usuario</label>
                 <input type="text" name="usuario" id="usuario" placeholder="Ingresa tu nombre como deportista" required>
                 <label for="ConfirmIncripcion">Verificacion</label>
-                <Input type="text" name="ConfirmIncripcion" id="ConfirmIncripcion" placeholder="Ingresa tu email/telefono de confirmacion" required>
-                
-
+                <Input type="text" name="ConfirmIncripcion" id="ConfirmIncripcion" placeholder="Ingresa tu contraseña para verificar que eres tu" required>
                 <label for="ciudad">Ciudad</label>
                 <input type="text" name="ciudad" id="ciudad" placeholder="Ingresa tu Ciudad de nacimiento (Campo opcional)"><br>
-                <input type="submit" class="botones" onclick="alerta()">
+                <input type="submit" class="botones" id="inscribirse">
                 <input type="reset" class="botones"><br>
                 <a href="Registro.html">¿Crear cuenta?</a>
             </form>
@@ -52,7 +73,7 @@
         <nav class="footer-nav">
             <ul>
                 <li class="footer-title">Redes sociales:</li>
-                <li><a href="#">Instagram</a></li>
+                <li><a href="https://www.instagram.com/rockthesport/?hl=es">Instagram</a></li>
                 <li><a href="#">Facebook</a></li>
             </ul>
             <ul>

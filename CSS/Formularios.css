@@ -33,12 +33,13 @@ header nav a {
   text-decoration: none;
   padding: 8px 15px;
   border-radius: 8px;
-  transition: 0.2s;
+  transition:box-shadow 0.3s ease;
 }
 
 header nav a:hover {
-  background-color: #1488c2;
+  background-color: #2537d6d3;
   color: white;
+  box-shadow: 0 10px 25px rgba(14, 10, 10, 0.185);
 }
 section{
   display: flex;

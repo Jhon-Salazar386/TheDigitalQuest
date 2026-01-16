@@ -3,96 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../CSS/Recorridos.css">
     <title>Recorridos</title>
 </head>
 <body>
     <header>
-        <img id="logo" src="../IMG/LogoRTS.png" alt="RockthesportLogo">
-        <h1>Recorridos</h1>
-        <nav id="navegacion">
-            <a href="Index.html">Inicio</a>
-            <a href="Calendario.html">Ver calendario</a>
-            <a href="InicioSesion.html">Iniciar sesion</a>
+        <div class="">
+            <div>
+                <img id="logo" src="../IMG/LogoRTS.png" alt="Logo de RockTheSport">
+            </div>
+
+            <div>          
+                <h1 class="">Recorridos</h1>
+            </div>
+
+        </div>
+
+        <nav class="navbar navbar-expand-md navbar-dark" id="navegacion">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Menu">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="Menu">
+                <div class="navbar-nav">
+                    <a href="Index.html" class="nav-link bi bi-arrow-return-left">Inicio</a>
+                    <a href="Calendario.html" class="nav-link bi bi-calendar">Ver calendario</a>
+                    <a href="InicioSesion.html" class="nav-link bi bi-box-arrow-in-right">Iniciar sesión</a>
+                </div>
+                </div>
+            </div>
         </nav>
     </header>
     <main>
-        <section>
+        <section id="Maraton" class="w-100 my-4">
             <h2>Maratones</h2>
-            <article>
-                <h3>Celebración en la recta final</h3>
-                <img src="../IMG/Maraton2.jpeg" alt="Corredor levantando los brazos cerca de la meta">
-                <p>Un corredor levanta los brazos con emoción mientras se acerca a la meta en una avenida rodeada de edificios, reflejando la intensidad y alegría del evento.</p>
-            </article>
-            <article>
-                <h3>Multitud en el maratón urbano</h3>
-                <img src="../IMG/Maraton3.jpeg" alt="Multitud de corredores en sendero urbano">
-                <p>Una enorme cantidad de atletas avanza por un sendero urbano rodeado de vegetación, mostrando la energía colectiva de una carrera multitudinaria.</p>
-            </article>
-            <article>
-                <h3>Liderando el pelotón</h3>
-                <img src="../IMG/Maraton4.jpeg" alt="Grupo liderando el pelotón">
-                <p>Un grupo de corredores mantiene un ritmo fuerte en una avenida amplia, destacando la competencia por mantenerse en la delantera.</p>
-            </article>
-            <article>
-                <h3>La ciudad como escenario</h3>
-                <img src="../IMG/Maraton5.jpeg" alt="Corredores con rascacielos de fondo">
-                <p>Corredores avanzan con rascacielos al fondo, reflejando la mezcla entre deporte y paisaje urbano característico de las grandes maratones.</p>
-            </article>
-            <article>
-                <h3>Victoria compartida</h3>
-                <img src="../IMG/Maraton6.jpeg" alt="Tres participantes celebrando al cruzar la meta">
-                <p>Tres participantes levantan los brazos al cruzar la meta, mostrando la unión y camaradería que caracteriza a muchas competencias populares.</p>
-            </article>
-            <article>
-                <h3>Impulso en equipo</h3>
-                <img src="../IMG/Maraton7.jpeg" alt="Grupo de corredores avanzando bajo el sol">
-                <p>Un grupo de corredores avanza con determinación en un tramo soleado, cada uno marcando su propio ritmo pero avanzando en conjunto.</p>
-            </article>
-            <article>
-                <h3>Carrera con ambiente festivo</h3>
-                <img src="../IMG/Maraton8.jpeg" alt="Pelotón de atletas sonrientes corriendo por la ciudad">
-                <p>Un pelotón variado de atletas sonríe mientras corre por calles urbanas, reflejando la alegría de participar en un evento deportivo masivo.</p>
-            </article>
+            <div class="row g-4">
+                <div class="col-12 col-md-3">
+                    <article class="card">
+                        <img src="../IMG/Maraton2.jpeg" class="card-img-top" alt="Corredor levantando los brazos cerca de la meta">
+                        <div class="card-body">
+                            <h3 class="card-title">Celebración en la recta final</h3>
+                            <p class="card-text fw-semibold">Un corredor levanta los brazos con emoción mientras se acerca a la meta en una avenida rodeada de edificios, reflejando la intensidad y alegría del evento.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-3">
+                    <article class="card">
+                        <img src="../IMG/Maraton3.jpeg" class="card-img-top" alt="Multitud de corredores en sendero urbano">
+                        <div class="card-body">
+                            <h3 class="card-title">Multitud en el maratón urbano</h3>
+                            <p class="card-text fw-semibold">Una enorme cantidad de atletas avanza por un sendero urbano rodeado de vegetación, mostrando la energía colectiva de una carrera multitudinaria.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-3">
+                    <article class="card">
+                        <img src="../IMG/Maraton4.jpeg" class="card-img-top" alt="Grupo liderando el pelotón">
+                        <div class="card-body">
+                            <h3 class="card-title">Liderando el pelotón</h3>
+                            <p class="card-text fw-semibold">Un grupo de corredores mantiene un ritmo fuerte en una avenida amplia, destacando la competencia por mantenerse en la delantera.</p>
+                        </div>
+                    </article>                    
+                </div>
+
+                <div class="col-12 col-md-3">
+                    <article class="card">
+                        <img src="../IMG/Maraton5.jpeg" class="card-img-top" alt="Corredores con rascacielos de fondo">
+                        <div class="card-body">
+                            <h3 class="card-title">La ciudad como escenario</h3>
+                            <p class="card-text">Corredores avanzan con rascacielos al fondo, reflejando la mezcla entre deporte y paisaje urbano característico de las grandes maratones.</p>
+                        </div>
+                    </article>                    
+                </div>
+
+                <div class="col-12 col-md-3">
+                    <article class="card">
+                        <img src="../IMG/Maraton6.jpeg" class="card-img-top" alt="Tres participantes celebrando al cruzar la meta">
+                        <div class="card-body">
+                            <h3 class="card-title">Victoria compartida</h3>
+                            <p class="card-text">Tres participantes levantan los brazos al cruzar la meta, mostrando la unión y camaradería que caracteriza a muchas competencias populares.</p>
+                        </div>
+                    </article>                   
+                </div>
+
+                <div class="col-12 col-md-3">
+                    <article class="card">
+                        <img src="../IMG/Maraton7.jpeg" class="card-img-top" alt="Grupo de corredores avanzando bajo el sol">
+                        <div class="card-body">
+                            <h3 class="card-title">Impulso en equipo</h3>
+                            <p class="card-text">Un grupo de corredores avanza con determinación en un tramo soleado, cada uno marcando su propio ritmo pero avanzando en conjunto.</p>
+                        </div>
+                    </article>                   
+                </div>
+
+                <div class="col-12 col-md-3">
+                    <article class="card">
+                        <img src="../IMG/Maraton8.jpeg" class="card-img-top" alt="Pelotón de atletas sonrientes corriendo por la ciudad">
+                        <div class="card-body">
+                            <h3 class="card-title">Carrera con ambiente festivo</h3>
+                            <p class="card-text">Un pelotón variado de atletas sonríe mientras corre por calles urbanas, reflejando la alegría de participar en un evento deportivo masivo.</p>
+                        </div>
+                    </article>                    
+                </div>
+            </div>
         </section>
-
-        <section>
+        <section id="Trail">
             <h2>Trail running</h2>
-            <article>
-                <h3>Ascenso entre Amigos</h3>
-                <img src="../IMG/Trail1.jpeg" alt="Grupo subiendo por terreno rocoso">
-                <p>Un grupo de corredores avanza con energía por un terreno rocoso, demostrando camaradería y esfuerzo compartido en plena montaña.</p>
-            </article>
+            <div class="row g-4">
+                <div class="col-12 col-md-3">
+                    <article class="card">
+                        <img src="../IMG/Trail1.jpeg" class="card-img-top" alt="Grupo subiendo por terreno rocoso">
+                        <div class="card-body">
+                            <h3 class="card-title">Ascenso entre Amigos</h3>
+                            <p class="card-text">Un grupo de corredores avanza con energía por un terreno rocoso, demostrando camaradería y esfuerzo compartido en plena montaña.</p>
+                        </div>
+                    </article>                    
+                </div>               
 
-            <article>
-                <h3>Sendero de Otoño</h3>
-                <img src="../IMG/Trail2.webp" alt="Corredores atravesando bosque otoñal">
-                <p>Corredores atraviesan un bosque otoñal, disfrutando de un camino cubierto de hojas y un ambiente fresco ideal para el trail.</p>
-            </article>
+                <div class="col-12 col-md-3">
+                    <article class="card">
+                        <img src="../IMG/Trail2.webp" class="card-img-top" alt="Corredores atravesando bosque otoñal">
+                        <div class="card-body">
+                            <h3 class="card-title">Sendero de Otoño</h3>
+                            <p class="card-text">Corredores atraviesan un bosque otoñal, disfrutando de un camino cubierto de hojas y un ambiente fresco ideal para el trail.</p>
+                        </div>
+                    </article>                    
+                </div>
 
-            <article>
-                <h3>Cumbre al Atardecer</h3>
-                <img src="../IMG/Trail3.jpg" alt="Corredora en cresta montañosa al atardecer">
-                <p>Una corredora recorre una cresta montañosa mientras el sol cae, creando una escena llena de libertad y vistas espectaculares.</p>
-            </article>
+                <div class="col-12 col-md-3">
+                    <article class="card">
+                        <img src="../IMG/Trail3.jpg" class="card-img-top" alt="Corredora en cresta montañosa al atardecer">
+                        <div class="card-body">
+                            <h3 class="card-title">Cumbre al Atardecer</h3>
+                            <p class="card-text">Una corredora recorre una cresta montañosa mientras el sol cae, creando una escena llena de libertad y vistas espectaculares.</p>
+                        </div>
+                    </article>                    
+                </div>
 
-            <article>
-                <h3>Reto Alpino</h3>
-                <img src="../IMG/Trail4.jpeg" alt="Dos corredores en ruta de altura">
-                <p>Dos corredores avanzan por una ruta de altura rodeada de picos imponentes, poniendo a prueba su resistencia en terrenos exigentes.</p>
-            </article>
+                <div class="col-12 col-md-3">
+                    <article class="card">
+                        <img src="../IMG/Trail4.jpeg" class="card-img-top" alt="Dos corredores en ruta de altura">
+                        <div class="card-body">
+                            <h3 class="card-title">Reto Alpino</h3>
+                            <p class="card-text">Dos corredores avanzan por una ruta de altura rodeada de picos imponentes, poniendo a prueba su resistencia en terrenos exigentes.</p>
+                        </div>
+                    </article>                    
+                </div>
 
-            <article>
-                <h3>Salto en las Nubes</h3>
-                <img src="../IMG/Trail5.jpg" alt="Corredor saltando sobre cima nevada">
-                <p>Un corredor celebra la emoción del trail saltando sobre una cima nevada, capturando el espíritu aventurero de la montaña.</p>
-            </article>
+                <div class="col-12 col-md-3">
+                    <article class="card">
+                        <img src="../IMG/Trail5.jpg" class="card-img-top" alt="Corredor saltando sobre cima nevada">
+                        <div class="card-body">
+                            <h3 class="card-title">Salto en las Nubes</h3>
+                            <p class="card-text">Un corredor celebra la emoción del trail saltando sobre una cima nevada, capturando el espíritu aventurero de la montaña.</p>
+                        </div>
+                    </article>                    
+                </div>
 
-            <article>
-                <h3>Senda entre Niebla</h3>
-                <img src="../IMG/Trail6.jpeg" alt="Corredor descendiendo por sendero con niebla">
-                <p>Un corredor desciende por un sendero pedregoso envuelto en neblina, enfrentando un ambiente misterioso y desafiante.</p>
-            </article>
+                <div class="col-12 col-md-3">
+                    <article class="card">
+                        <img src="../IMG/Trail6.jpeg" class="card-img-top" alt="Corredor descendiendo por sendero con niebla">
+                        <div class="card-body">
+                            <h3 class="card-title">Senda entre Niebla</h3>
+                            <p class="card-text">Un corredor desciende por un sendero pedregoso envuelto en neblina, enfrentando un ambiente misterioso y desafiante.</p>
+                        </div>
+                    </article>                     
+                </div>   
+            </div>
         </section>
     </main>
     <footer>
@@ -102,16 +184,19 @@
         <nav class="footer-nav">
             <ul>
                 <li class="footer-title">Redes sociales:</li>
-                <li><a href="#">Instagram</a></li>
+                <li><a href="https://www.instagram.com/rockthesport/?hl=es">Instagram</a></li>
                 <li><a href="#">Facebook</a></li>
             </ul>
             <ul>
                 <li class="footer-title">¿Necesitas ayuda?:</li>
-                <li><a href="#">Contáctanos</a></li>
+                <li><a href="">Contáctanos</a></li>
                 <li><a href="#">Guía para organizadores</a></li>
             </ul>
         </nav>
         <img src="../IMG/LogoRTS.png" alt="Logo RocktheSport">
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

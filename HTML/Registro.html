@@ -8,28 +8,56 @@
     <link rel="stylesheet" href="../CSS/Formularios.css">
     
     <script>
-        document.addEventListener("DOMContentLoaded", function(){
+        document.addEventListener("DOMContentLoaded", function() {
             const usuario = document.getElementById("usuario");
             const contra = document.getElementById("contra");
             const confirmcontra = document.getElementById("confirmcontra");
+            const email = document.getElementById("Email");
             const registrar = document.getElementById("registrarse");
-            
-            registrar.addEventListener("click", function(){
 
-                let user = usuario.value.trim();;
-                let password = contra.value.trim();;
-                let confirmPassword = confirmcontra.value.trim();;
+            let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
-                if(user !== "" && password === confirmPassword){
-                    alert("Registro completo");
-                    localStorage.setItem("Usuario", user);
-                    localStorage.setItem("Contraseña", password);
-                    window.location.href = "InicioSesion.html";
-                } else {
-                    alert("Algo anda mal");
+            registrar.addEventListener("click", function(e) {
+                e.preventDefault(); 
+
+                let user = usuario.value.trim();
+                let password = contra.value.trim();
+                let confirmPassword = confirmcontra.value.trim();
+                let emailValue = email.value.trim();
+
+                const emailSymbol = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                if (!emailSymbol.test(emailValue)) {
+                    alert("Por favor, ingresa un correo electrónico válido.");
+                    return;
                 }
-            })
-        })  
+
+                if (password !== confirmPassword) {
+                    alert("Las contraseñas no coinciden.");
+                    return;
+                }
+
+                if (user === "" || password === "") {
+                    alert("Por favor completa todos los campos.");
+                    return;
+                }
+
+                const nuevoUsuario = {
+                    nombre: user,
+                    contraseña: password,
+                    email: emailValue,
+                    fecha: document.getElementById("fecha").value,
+                    genero: document.getElementById("gender").value
+                };
+
+                usuarios.push(nuevoUsuario);
+
+                localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+                alert("Registro completo");
+                window.location.href = "InicioSesion.html";
+            });
+        });
     </script>
 
 </head>
@@ -59,8 +87,8 @@
                     <option value="Others">Otros</option>
                 </select><br>
                 <label for="Email">Correo electronico</label>
-                <input type="text" class="inputs" placeholder="Ingresa tu email" name="Email" id="Email"><br>
-                <input type="button" class="botones" id="registrarse" value="Resgistrarse">
+                <input type="email" class="inputs" placeholder="Ingresa tu email" name="Email" id="Email" required><br>
+                <input type="submit" class="botones" id="registrarse" value="Resgistrarse">
                 <input type="reset" class="botones" value="Limpiar">
             </form>
         </section>
@@ -72,7 +100,7 @@
         <nav class="footer-nav">
             <ul>
                 <li class="footer-title">Redes sociales:</li>
-                <li><a href="#">Instagram</a></li>
+                <li><a href="https://www.instagram.com/rockthesport/?hl=es">Instagram</a></li>
                 <li><a href="#">Facebook</a></li>
             </ul>
             <ul>

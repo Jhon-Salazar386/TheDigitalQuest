@@ -8,32 +8,42 @@
     <link rel="stylesheet" href="../CSS/Formularios.css">
     
     <script>
-        document.addEventListener("DOMContentLoaded", function(){
+        document.addEventListener("DOMContentLoaded", function() {
 
             const usuario = document.getElementById("usuario");
             const contraseña = document.getElementById("contra");
             const iniciar = document.getElementById("iniciarSesion");
 
-            iniciar.addEventListener("click", function(){
+            iniciar.addEventListener("click", function(e) {
+                e.preventDefault();
+
                 let valorUsuario = usuario.value.trim();
                 let valorContraseña = contraseña.value.trim();
-                let usuarioReg = localStorage.getItem("Usuario");
-                let contraseñaReg = localStorage.getItem("Contraseña");
 
+                let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+                let usuarioEncontrado = null;
 
-                if(valorUsuario !== "" && valorContraseña !== ""){
-                    if(valorUsuario === usuarioReg && valorContraseña === contraseñaReg){
-                        alert("Logueado exitosamente");
-                        window.location.href = "Index.html";
-                    } else {
-                        alert("Algo anda mal")
-                    }
-
-                } else {
-                    alert("El campo no puede estar vacio")
+                if (valorUsuario === "" || valorContraseña === "") {
+                    alert("Los campos no pueden estar vacíos");
+                    return;
                 }
-            })
-        })
+
+                usuarios.forEach(u => {
+                    if ((u.nombre === valorUsuario || u.email === valorUsuario) && u.contraseña === valorContraseña) {
+                        usuarioEncontrado = u;
+                    }
+                });
+
+                if (usuarioEncontrado) {
+                    alert("Logueado correctamente");
+                    localStorage.setItem("usuarioLogueado", JSON.stringify(usuarioEncontrado));
+                    window.location.href = "Index.html";
+                } else {
+                    alert("Usuario o contraseña incorrectos");
+                }
+            });
+        });
+
     </script>
     
 </head>
@@ -65,7 +75,7 @@
         <nav class="footer-nav">
             <ul>
                 <li class="footer-title">Redes sociales:</li>
-                <li><a href="#">Instagram</a></li>
+                <li><a href="https://www.instagram.com/rockthesport/?hl=es">Instagram</a></li>
                 <li><a href="#">Facebook</a></li>
             </ul>
             <ul>

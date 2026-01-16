@@ -1,6 +1,6 @@
 * {
   margin: 0;
-  padding: 0;
+  padding: 0px;
 }
 
 body {
@@ -41,16 +41,18 @@ header h1 {
 }
 
 #navegacion a:hover {
-  background-color: #1678c9;
+  background-color: #2537d6d3;
   color: #ffffff;
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 25px rgba(14, 10, 10, 0.185);
 }
+
 
 #articulos {
   background-color: #FFFFFF;
   padding: 25px 30px;
   border-radius: 12px;
+  font-size: 21px;
 }
 
 #articulos h2{
@@ -163,6 +165,11 @@ footer img {
 }
 
 @media (max-width: 768px) {
+  
+  *{
+    font-size: 18PX;
+  }
+  
   header {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
