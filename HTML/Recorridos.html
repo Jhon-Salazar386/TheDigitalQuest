@@ -5,34 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../CSS/Recorridos.css">
+    <link rel="stylesheet" href="../CSS/Recorridos.css?v=123">
     <title>Recorridos</title>
+
+    <Script src="../JavaScript/Recorridos.js"></Script>
+
 </head>
 <body>
     <header>
-        <div class="">
-            <div>
+        <div>
+            <div class="d-flex align-items-center gap-3">
                 <img id="logo" src="../IMG/LogoRTS.png" alt="Logo de RockTheSport">
+                <h1 class="m-0 fw-bold display-6 text-white">Menu principal</h1>
             </div>
-
-            <div>          
-                <h1 class="">Recorridos</h1>
-            </div>
-
         </div>
-
-        <nav class="navbar navbar-expand-md navbar-dark" id="navegacion">
+        <nav class="navbar navbar-expand-md navbar-dark p-0" id="navegacion">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Menu">
-                <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="Menu">
-                <div class="navbar-nav">
-                    <a href="Index.html" class="nav-link bi bi-arrow-return-left">Inicio</a>
-                    <a href="Calendario.html" class="nav-link bi bi-calendar">Ver calendario</a>
-                    <a href="InicioSesion.html" class="nav-link bi bi-box-arrow-in-right">Iniciar sesión</a>
-                </div>
+                    <div class="navbar-nav">
+                        <a href="../Index.html" class="nav-link bi bi-arrow-return-left">Inicio</a>
+                        <a href="Calendario.html" class="nav-link bi bi-calendar-date-fill">Ver calendario</a>
+                        <a href="InicioSesion.html" id="iniciarSesion" class="nav-link bi bi-box-arrow-in-right">Iniciar sesión</a>
+                        <a href="Perfil.html" id="Perfil" class="nav-link bi bi-person-fill">Ver perfil</a>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -41,7 +40,7 @@
         <section id="Maraton" class="w-100 my-4">
             <h2>Maratones</h2>
             <div class="row g-4">
-                <div class="col-12 col-md-3">
+                <div class="col-12 col-lg-3 col-md-4">
                     <article class="card">
                         <img src="../IMG/Maraton2.jpeg" class="card-img-top" alt="Corredor levantando los brazos cerca de la meta">
                         <div class="card-body">
@@ -51,7 +50,7 @@
                     </article>
                 </div>
 
-                <div class="col-12 col-md-3">
+                <div class="col-12 col-lg-3 col-md-4">
                     <article class="card">
                         <img src="../IMG/Maraton3.jpeg" class="card-img-top" alt="Multitud de corredores en sendero urbano">
                         <div class="card-body">
@@ -61,7 +60,7 @@
                     </article>
                 </div>
 
-                <div class="col-12 col-md-3">
+                <div class="col-12 col-lg-3 col-md-4">
                     <article class="card">
                         <img src="../IMG/Maraton4.jpeg" class="card-img-top" alt="Grupo liderando el pelotón">
                         <div class="card-body">
@@ -71,7 +70,7 @@
                     </article>                    
                 </div>
 
-                <div class="col-12 col-md-3">
+                <div class="col-12 col-lg-3 col-md-4">
                     <article class="card">
                         <img src="../IMG/Maraton5.jpeg" class="card-img-top" alt="Corredores con rascacielos de fondo">
                         <div class="card-body">
@@ -81,7 +80,7 @@
                     </article>                    
                 </div>
 
-                <div class="col-12 col-md-3">
+                <div class="col-12 col-lg-3 col-md-4">
                     <article class="card">
                         <img src="../IMG/Maraton6.jpeg" class="card-img-top" alt="Tres participantes celebrando al cruzar la meta">
                         <div class="card-body">
@@ -91,7 +90,7 @@
                     </article>                   
                 </div>
 
-                <div class="col-12 col-md-3">
+                <div class="col-12 col-lg-3 col-md-4">
                     <article class="card">
                         <img src="../IMG/Maraton7.jpeg" class="card-img-top" alt="Grupo de corredores avanzando bajo el sol">
                         <div class="card-body">
@@ -101,7 +100,7 @@
                     </article>                   
                 </div>
 
-                <div class="col-12 col-md-3">
+                <div class="col-12 col-lg-3 col-md-4">
                     <article class="card">
                         <img src="../IMG/Maraton8.jpeg" class="card-img-top" alt="Pelotón de atletas sonrientes corriendo por la ciudad">
                         <div class="card-body">
@@ -115,7 +114,7 @@
         <section id="Trail">
             <h2>Trail running</h2>
             <div class="row g-4">
-                <div class="col-12 col-md-3">
+                <div class="col-12 col-lg-3 col-md-4">
                     <article class="card">
                         <img src="../IMG/Trail1.jpeg" class="card-img-top" alt="Grupo subiendo por terreno rocoso">
                         <div class="card-body">
@@ -125,7 +124,7 @@
                     </article>                    
                 </div>               
 
-                <div class="col-12 col-md-3">
+                <div class="col-12 col-lg-3 col-md-4">
                     <article class="card">
                         <img src="../IMG/Trail2.webp" class="card-img-top" alt="Corredores atravesando bosque otoñal">
                         <div class="card-body">
@@ -135,7 +134,7 @@
                     </article>                    
                 </div>
 
-                <div class="col-12 col-md-3">
+                <div class="col-12 col-lg-3 col-md-4">
                     <article class="card">
                         <img src="../IMG/Trail3.jpg" class="card-img-top" alt="Corredora en cresta montañosa al atardecer">
                         <div class="card-body">
@@ -145,7 +144,7 @@
                     </article>                    
                 </div>
 
-                <div class="col-12 col-md-3">
+                <div class="col-12 col-lg-3 col-md-4">
                     <article class="card">
                         <img src="../IMG/Trail4.jpeg" class="card-img-top" alt="Dos corredores en ruta de altura">
                         <div class="card-body">
@@ -155,7 +154,7 @@
                     </article>                    
                 </div>
 
-                <div class="col-12 col-md-3">
+                <div class="col-12 col-lg-3 col-md-4">
                     <article class="card">
                         <img src="../IMG/Trail5.jpg" class="card-img-top" alt="Corredor saltando sobre cima nevada">
                         <div class="card-body">
@@ -165,7 +164,7 @@
                     </article>                    
                 </div>
 
-                <div class="col-12 col-md-3">
+                <div class="col-12 col-lg-3 col-md-4">
                     <article class="card">
                         <img src="../IMG/Trail6.jpeg" class="card-img-top" alt="Corredor descendiendo por sendero con niebla">
                         <div class="card-body">
@@ -179,7 +178,7 @@
     </main>
     <footer>
         <div>
-            <p><strong>Plataforma para gestionar eventos deportivos</strong></p>
+            <p><strong>© 2024 RockTheSport - Plataforma para gestionar eventos deportivos</strong></p>
         </div>
         <nav class="footer-nav">
             <ul>
@@ -189,8 +188,8 @@
             </ul>
             <ul>
                 <li class="footer-title">¿Necesitas ayuda?:</li>
-                <li><a href="">Contáctanos</a></li>
-                <li><a href="#">Guía para organizadores</a></li>
+                <li><a href="#">Contáctanos</a></li>
+                <li><a href="GuiaOrganizador.html">Guía para organizadores</a></li>
             </ul>
         </nav>
         <img src="../IMG/LogoRTS.png" alt="Logo RocktheSport">

@@ -10,7 +10,8 @@ body {
 }
 
 header {
-  background: linear-gradient(90deg,rgba(118, 202, 219, 1) 0%, rgba(20, 16, 156, 1) 100%);
+  background: linear-gradient(90deg, rgba(118, 202, 219, 1) 0%, rgba(20, 16, 156, 1) 100%);
+  color: #F5F9FC;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -18,6 +19,7 @@ header {
   margin-bottom: 30px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  box-shadow: 2px 3px 1px 1px #99c4e7;
 }
 
 #logo {
@@ -42,7 +44,7 @@ header h1 {
 }
 
 #navegacion a:hover {
-  background-color: #2337ec;
+  background-color: #2537d6d3;
   color: #ffffff;
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(14, 10, 10, 0.185);
@@ -138,22 +140,106 @@ footer img {
 }
 
 @media (max-width: 768px) {
+
   header {
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  nav{
-    display: flex;
-  }
-  header h1 {
-    margin-top: 10px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    flex-basis: 100%;
+    gap: 10px;
   }
-  article{
-    width: 88%;
-    font-size: 20px;
+
+  header h1 {
+    font-size: 1.3rem;
+  }
+
+  article img {
+  width: 98%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #27A2E1;
+  box-shadow: 1px 1px 8px 2px gray;
+  }
+
+  #logo {
+    height: 45px;
+  }
+
+  main {
+    width: 95%;
+    margin: 30px auto;
+    padding: 15px;
+  }
+
+  table {
+    width: 100%;
+    min-width: 600px;
+  }
+
+  main {
+    overflow-x: auto;
+  }
+
+  caption,
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  th,
+  td {
+    font-size: 0.9rem;
+    padding: 8px 6px;
+  }
+
+  .buttons {
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+    font-size: 1rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+
+  .footer-nav {
+    justify-content: space-between;
+  }
+
+  footer img {
+    position: absolute;
+    margin-top: 0px;
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.1rem;
+  }
+
+  caption,
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  article img {
+  width: 98%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #27A2E1;
+  box-shadow: 1px 1px 8px 2px gray;
+}
+
+  th,
+  td {
+    font-size: 0.8rem;
+  }
+
+  .buttons {
+    font-size: 0.9rem;
+    padding: 10px;
   }
 }

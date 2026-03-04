@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía para Organizadores</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../CSS/GuiaOrganizador.css">
+
+</head>
+<body>
+
+    <header class="guide-header">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between py-3">
+                <div class="d-flex align-items-center gap-3">
+                    <img src="../IMG/LogoRTS.png" alt="Logo" class="logo">
+                    <h1 class="text-white m-0">Guía para organizadores</h1>
+                </div>
+                <a href="../Index.html" class="btn btn-light btn-sm">
+                    <i class="bi bi-arrow-return-left"></i> Volver al inicio
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-5">
+
+        <section class="guide-card p-4 rounded shadow-sm">
+            <h2 class="guide-title">Bienvenido a la guía de organización</h2>
+            <p class="guide-text">
+                En RockTheSport queremos que organizar eventos sea tan fácil como correr una buena carrera.
+                Esta guía está diseñada para ayudarte a administrar tus eventos de forma eficiente,
+                utilizando buenas prácticas de desarrollo y gestión de datos.
+            </p>
+        </section>
+
+        <section class="row mt-4">
+
+            <div class="col-md-6 mb-4">
+                <div class="guide-card p-4 rounded shadow-sm h-100">
+                    <h3 class="guide-subtitle"><i class="bi bi-clipboard-check"></i> Planificación del evento</h3>
+                    <p class="guide-text">
+                        Antes de crear un evento, define claramente:
+                        el nombre, la fecha, la ruta, el tipo de competencia y el número de participantes.
+                        Esto ayuda a evitar errores y facilita el registro de los usuarios.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="guide-card p-4 rounded shadow-sm h-100">
+                    <h3 class="guide-subtitle"><i class="bi bi-calendar-event"></i> Gestión de participantes</h3>
+                    <p class="guide-text">
+                        Una vez creado el evento, puedes gestionar participantes, asignar dorsales,
+                        revisar pagos y actualizar información personal.
+                        En nuestra plataforma, esto se realiza con métodos CRUD para garantizar consistencia.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="guide-card p-4 rounded shadow-sm mt-4">
+            <h2 class="guide-title">Métodos CRUD en la gestión de eventos</h2>
+
+            <p class="guide-text">
+                CRUD es un conjunto de operaciones básicas para manejar datos en una aplicación.  
+                En el contexto de organización de eventos, CRUD te permite administrar todo el ciclo de vida de un evento,
+                desde su creación hasta su eliminación.
+            </p>
+
+            <div class="row mt-3">
+
+                <div class="col-md-6 mb-3">
+                    <div class="guide-card p-3 rounded shadow-sm">
+                        <h3 class="guide-subtitle"><i class="bi bi-plus-circle"></i> CREATE (Crear)</h3>
+                        <p class="guide-text">
+                            El método <strong>Create</strong> se usa para registrar nuevos eventos, participantes o rutas.
+                            Por ejemplo, al crear un nuevo maratón, se guarda el nombre, la fecha, la ciudad,
+                            la distancia y la descripción del evento.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <div class="guide-card p-3 rounded shadow-sm">
+                        <h4 class="guide-subtitle"><i class="bi bi-eye"></i> READ (Leer)</h4>
+                        <p class="guide-text">
+                            El método <strong>Read</strong> permite consultar información existente.
+                            En tu plataforma, esto se usa para ver el calendario de eventos,
+                            listar participantes inscritos o revisar los detalles de un evento.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <div class="guide-card p-3 rounded shadow-sm">
+                        <h4 class="guide-subtitle"><i class="bi bi-pencil-square"></i> UPDATE (Actualizar)</h4>
+                        <p class="guide-text">
+                            método <strong>Update</strong> sirve para modificar datos existentes.
+                            Si un evento cambia de fecha, o un participante actualiza su teléfono,
+                            esta operación permite mantener la información correcta y actualizada.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <div class="guide-card p-3 rounded shadow-sm">
+                        <h4 class="guide-subtitle"><i class="bi bi-trash"></i> DELETE (Eliminar)</h4>
+                        <p class="guide-text">
+                            El método <strong>Delete</strong> elimina registros que ya no son necesarios.
+                            Por ejemplo, borrar un evento cancelado o eliminar usuarios inactivos.
+                            En RockTheSport, recomendamos hacerlo con confirmación para evitar errores.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="guide-card p-4 rounded shadow-sm mt-4">
+            <h2 class="guide-title">Consejos para organizar mejor</h2>
+            <ul class="guide-list">
+                <li>Define reglas claras de participación y seguridad.</li>
+                <li>Verifica los datos antes de publicar el evento.</li>
+                <li>Mantén actualizada la información del calendario.</li>
+                <li>Comunica cambios con antelación a los participantes.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="guide-footer text-center py-3">
+        <p class="mb-0">© 2024 RockTheSport - Plataforma para gestionar eventos deportivos</p>
+    </footer>
+
+</body>
+</html>

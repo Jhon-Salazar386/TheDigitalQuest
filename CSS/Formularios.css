@@ -1,26 +1,28 @@
-
 * {
   margin: 0;
   padding: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-sizing: border-box;
 }
+
 
 body {
+  display: flex;
+  flex-direction: column;
   background-color: #F5F9FC;
   color: #333;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-
 
 header {
   width: 80%;
+  margin: 18px auto 40px;
   display: flex;
-  margin: 18px auto;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(90deg,rgba(118, 202, 219, 1) 0%, rgba(20, 16, 156, 1) 100%);
   padding: 12px 20px;
+  background: linear-gradient(90deg, #76cadb 0%, #14109c 100%);
   border-radius: 12px;
-  margin-bottom: 40px;
 }
 
 #Logo {
@@ -28,62 +30,55 @@ header {
 }
 
 header nav a {
-  color: hsl(206, 72%, 86%);
-  font-weight: 700;
-  text-decoration: none;
   padding: 8px 15px;
+  text-decoration: none;
+  font-weight: 700;
+  color: hsl(206, 72%, 86%);
   border-radius: 8px;
-  transition:box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 header nav a:hover {
   background-color: #2537d6d3;
-  color: white;
+  color: #fff;
   box-shadow: 0 10px 25px rgba(14, 10, 10, 0.185);
 }
-section{
-  display: flex;
-  margin: 0 auto;
-  margin-bottom: 80px;
-  justify-content: center;
-  align-items: center;
+
+main {
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+
+section {
   width: 70vw;
+  margin: 0 auto;
 }
 
 form {
-  background: white;
-  padding: 35px 30px;
-  border-radius: 16px;
-  width: 90%;
   display: flex;
+  max-width: 750px;
   flex-direction: column;
-  gap: 18px;
+  gap: 10px;
+  border-radius: 16px;
 }
 
 form h1 {
-  text-align: center;
-  color: #004C8C;
-  font-weight: 800;
-  font-size: 2rem;
   margin-bottom: 15px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #004C8C;
 }
 
 label {
-  font-weight: 600;
-  color: #004C8C;
   margin-bottom: 1px;
   font-size: 16px;
+  font-weight: 600;
+  color: #004C8C;
 }
 
-input {
-  padding: 12px 15px;
-  font-size: 1rem;
-  border: 2px solid #A7D8FF;
-  border-radius: 10px;
-  outline-color: #27A2E1;
-}
-
-form select{
+input,
+select {
   padding: 12px 15px;
   font-size: 1rem;
   border: 2px solid #A7D8FF;
@@ -92,38 +87,22 @@ form select{
 }
 
 .botones {
-  cursor: pointer;
-  background-color: #004C8C;
-  color: white;
-  border: none;
+  width: 50%;
+  margin: 0 auto;
   padding: 14px 0;
+  border: none;
   border-radius: 12px;
-  font-weight: 700;
+  background-color: #004C8C;
+  color: #fff;
   font-size: 1.1rem;
+  font-weight: 700;
   transition: 0.3s;
-}
-
-.botones:hover {
-  background-color: #27A2E1;
-}
-
-form a {
-  text-align: center;
-  display: block;
-  margin-top: 25px;
-  font-weight: 600;
-  color: #004C8C;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-#crear:hover {
-  color: #27A2E1;
 }
 
 footer {
   display: flex;
   position: relative;
+  bottom: 0;
   flex-direction: column;
   padding: 20px 30px;
   background: linear-gradient(90deg,rgb(17, 30, 32) 0%,rgba(20, 16, 156, 1) 100%);
@@ -176,21 +155,21 @@ footer img {
 }
 
 @media (max-width: 650px) {
-  form {
-    padding: 25px 20px;
-  }
-
   header {
     padding: 10px 15px;
   }
 
-  form h2 {
+  form {
+    padding: 25px 20px;
+  }
+
+  form h1 {
     font-size: 6vw;
     border-bottom: 2px solid #27A2E1;
   }
 
   .botones {
-    font-size: 1rem;
     padding: 12px 0;
+    font-size: 1rem;
   }
 }
