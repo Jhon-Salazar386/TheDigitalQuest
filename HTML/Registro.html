@@ -7,7 +7,7 @@
     <link rel="icon" href="../IMG/Icon.png" type="imgage/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"/> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <script src="../JavaScript/Registro.js?v=123"></script>
+    <script src="../JavaScript/Registro.js"></script>
     <link rel="stylesheet" href="../CSS/Formularios.css">
 </head>
 <body>
@@ -29,12 +29,27 @@
                     </span>
                     <input type="text"
                         class="form-control bg-light"
+                        placeholder="DNI"
+                        required
+                        name="dni"
+                        id="dni">
+                    <div class="invalid-tooltip">
+                        Por favor, ingresa su DNI
+                    </div>
+                </div>
+
+                <div class="input-group mt-3">
+                    <span class="input-group-text bg-info text-white">
+                        <i class="bi bi-person-fill"></i>
+                    </span>
+                    <input type="text"
+                        class="form-control bg-light"
                         placeholder="Nombre"
                         required
                         name="usuario"
                         id="usuario">
                     <div class="invalid-tooltip">
-                        Por favor, ingresa nu nombre
+                        Por favor, ingresa su nombre
                     </div>
                 </div>
 

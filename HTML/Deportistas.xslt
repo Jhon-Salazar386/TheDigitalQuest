@@ -83,6 +83,8 @@
                 <th>Genero</th>
                 <th>Edad</th>
                 <th>Ciudad de nacimiento</th>
+                <th>Email</th>
+                <th>Telefono</th>
             </tr>
 
             <xsl:for-each select="deportistas/deportista">
@@ -91,8 +93,10 @@
                     <td><xsl:value-of select="nombre"/></td>
                     <td><xsl:value-of select="apellido"/></td>
                     <td><xsl:value-of select="genero"/></td>            
-                    <td><xsl:value-of select="edad"/></td>
+                    <td><xsl:value-of select="fechaNac"/></td>
                     <td><xsl:value-of select="ciudadnac"/></td>
+                    <td><xsl:value-of select="email"/></td>
+                    <td><xsl:value-of select="telefono"/></td>
                 </tr>
             </xsl:for-each>
 

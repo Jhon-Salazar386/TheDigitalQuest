@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function(){
     const userLogued = JSON.parse(sessionStorage.getItem("usuarioLogueado"));
-    document.getElementById("userName").innerText =userLogued.nombre + " " + userLogued.apellido;
+    document.getElementById("userName").innerText =userLogued.nombre + " " + userLogued.apellidos;
+    document.getElementById("dni").innerText = userLogued.dni;
     document.getElementById("fecha").innerText = userLogued.fecha;
     document.getElementById("ciudad").innerText = userLogued.ciudad;
     document.getElementById("telefono").innerText = userLogued.telefono;

@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function(){
     let usuarioLogueado = JSON.parse(sessionStorage.getItem("usuarioLogueado"));
     const inicioSesion = document.getElementById("iniciarSesion");
     const Perfil = document.getElementById("Perfil")
+    const mGestion = document.getElementById("menuGestion");
     const inscribirse = document.querySelectorAll(".inscribirse");
 
     if(usuarioLogueado){
@@ -10,6 +11,12 @@ document.addEventListener("DOMContentLoaded", function(){
     } else {
         inicioSesion.style.display = "block";
         Perfil.style.display = "none";
+    }
+
+    if (usuarioLogueado && usuarioLogueado.organizador) {
+        mGestion.style.display = "block";
+    } else {
+        mGestion.style.display = "none";
     }
 
     inscribirse.forEach(boton => {

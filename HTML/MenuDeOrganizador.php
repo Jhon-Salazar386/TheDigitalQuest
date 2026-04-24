@@ -68,8 +68,10 @@
                         $empleado->addChild('nombre', $fila['Nombre']);
                         $empleado->addChild('apellido', $fila['Apellidos']);
                         $empleado->addChild('genero', $fila['Genero']);
-                        $empleado->addChild('edad', (int)$fila['Edad']);
+                        $empleado->addChild('fechaNac', $fila['FechaNac']);
                         $empleado->addChild('ciudadnac', $fila['Ciudadnac']);
+                        $empleado->addChild('email', $fila['Email']);
+                        $empleado->addChild('telefono', $fila['Telefono']);
                     }
 
                     // Validar con XSD
