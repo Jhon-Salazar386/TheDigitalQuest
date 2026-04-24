@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ciudades xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Ciudades.xsd">
+    <ciudad codigo="MAD">
+        <nombre>Madrid</nombre>
+        <ubicacion>Centro de España</ubicacion>
+    </ciudad>
+
+    <ciudad codigo="BCN">
+        <nombre>Barcelona</nombre>
+        <ubicacion>Nordeste de España, costa mediterránea</ubicacion>
+    </ciudad>
+
+    <ciudad codigo="VAL">
+        <nombre>Valencia</nombre>
+        <ubicacion>Este de España, costa mediterránea</ubicacion>
+    </ciudad>
+
+    <ciudad codigo="SEV">
+        <nombre>Sevilla</nombre>
+        <ubicacion>Sur de España, región de Andalucía</ubicacion>
+    </ciudad>
+
+    <ciudad codigo="BIL">
+        <nombre>Bilbao</nombre>
+        <ubicacion>Norte de España, País Vasco</ubicacion>
+    </ciudad>
+</ciudades>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RockTheSport</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./CSS/Index.css">
+    <link rel="icon" href="./IMG/LogoRTS.png" type="image/png">
+
+    <Script src="./JavaScript/Index.js"></Script>
+
+</head>
+<body>
+    <header>
+        <div>
+            <div class="d-flex align-items-center gap-3">
+                <img id="logo" src="./IMG/LogoRTS.png" alt="Logo de RockTheSport">
+                <h1 class="m-0 fw-bold display-6 text-white">Menu principal</h1>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-md navbar-dark p-0" id="navegacion">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="Menu">
+                    <div class="navbar-nav">
+                        <a href="./HTML/PanelDeGestion.html" class="bi bi-person-lines-fill" id="menuGestion">Menu de gestion</a>
+                        <a href="./HTML/Recorridos.html" class="nav-link bi bi-dpad-fill"><i>Recorridos</i></a>
+                        <a href="./HTML/Calendario.html" class="nav-link bi bi-calendar-date-fill">Ver calendario</a>
+                        <a href="./HTML/InicioSesion.html" id="iniciarSesion" class="nav-link bi bi-box-arrow-in-right">Iniciar sesión</a>
+                        <a href="./HTML/Perfil.html" id="Perfil" class="nav-link bi bi-person-fill">Ver perfil</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="">
+        <div id="carrusel">
+            <div id="carouselExampleAutoplaying" class="carousel slide mx-auto" data-bs-ride="carousel" style="width: 96%;">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./IMG/Fondodeportivo.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./IMG/Articulo2.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./IMG/Maraton.png" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <section id="articulos">
+            <h2>Artículos de eventos</h2>
+            <article>
+                <h3>Carrera de atletismo</h3>
+                <p>
+                    La competencia reunió a destacadas atletas femeninas de distintos países,
+                    quienes se enfrentaron en una exigente prueba de velocidad y resistencia
+                    sobre la pista. El evento atrajo a cientos de espectadores.
+                </p>
+                <figure>
+                    <img src="./IMG/Maraton.png" alt="Atletas femeninas compitiendo en una pista de atletismo">
+                    <figcaption>Carrera internacional femenina de atletismo</figcaption>
+                </figure>
+                <h4>Resumen</h4>
+                <p>
+                    Nueve corredoras de distintos países compitieron en una emocionante carrera.
+                    La prueba tuvo que reiniciarse tras una salida anticipada, y finalmente se
+                    desarrolló con intensidad y fair play, destacando el talento internacional.
+                </p>
+            </article>
+            <article>
+                <h3>Maratón 10 km</h3>
+                <p>
+                    El Maratón de 10 kilómetros reunió a cientos de corredores que llenaron las
+                    calles de energía y entusiasmo desde las primeras horas del día.
+                </p>
+                <figure>
+                    <img src="./IMG/Maraton1.jpeg" alt="Corredores participando en un maratón urbano de 10 kilómetros">
+                    <figcaption>Participantes durante el Maratón 10 km</figcaption>
+                </figure>
+                <h4>Descripción</h4>
+                <p>
+                    Más de 800 participantes recorrieron la ciudad en un evento bien organizado,
+                    con puntos de hidratación y un recorrido seguro. El ganador finalizó con un
+                    tiempo de 32 minutos, promoviendo la actividad física y la unión comunitaria.
+                </p>
+                <a href="./HTML/InscripEven.html" class="inscribirse">Inscribirse</a>
+            </article>
+            <article>
+                <h3>Carrera de BMX</h3>
+                <p>
+                    La próxima carrera de BMX se llevará a cabo en un desafiante circuito de
+                    40 kilómetros, con zonas de ascenso, curvas cerradas y tramos de tierra.
+                </p>
+                <figure>
+                    <img src="./IMG/Articulo2.jpg" alt="Ciclistas compitiendo en un circuito de BMX de tierra">
+                    <figcaption>Carrera de BMX en circuito profesional</figcaption>
+                </figure>
+                <h4>Descripción</h4>
+                <p>
+                    La competencia promete ser una de las más emocionantes del año, con
+                    participación récord y una organización que garantiza seguridad y emoción
+                    para corredores y espectadores.
+                </p>
+                <a href="./HTML/InscripEven.html" class="inscribirse">Inscribirse</a>
+            </article>
+        </section>
+    </main>
+    <button id="InicioRapido" class="btn btn-primary">Inicio rapido</button>
+    <footer>
+        <div>
+            <p><strong>© 2024 RockTheSport - Plataforma para gestionar eventos deportivos</strong></p>
+        </div>
+        <nav class="footer-nav">
+            <ul>
+                <li class="footer-title">Redes sociales:</li>
+                <li><a href="https://www.instagram.com/rockthesport/?hl=es">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+            </ul>
+            <ul>
+                <li class="footer-title">¿Necesitas ayuda?:</li>
+                <li><a href="#">Contáctanos</a></li>
+                <li><a href="./HTML/GuiaOrganizador.html">Guía para organizadores</a></li>
+            </ul>
+        </nav>
+        <img src="./IMG/LogoRTS.png" alt="Logo RocktheSport">
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

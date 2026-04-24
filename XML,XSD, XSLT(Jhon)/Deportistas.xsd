@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:simpleType name="DniType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{8}[A-Z]"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="NombreType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="50"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ApellidoType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="GeneroType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Hombre"/>
+            <xs:enumeration value="Mujer"/>
+            <xs:enumeration value="Otros"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="EdadType">
+        <xs:restriction base="xs:integer">
+            <xs:minExclusive value="18"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="CiudadnacType">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="lista">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="deportista" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="NombreType"></xs:element>
+                            <xs:element name="apellido" type="ApellidoType"></xs:element>
+                            <xs:element name="genero" type="GeneroType"></xs:element>
+                            <xs:element name="edad" type="EdadType"></xs:element>
+                            <xs:element name="ciudadNac" type="CiudadnacType" minOccurs="0"></xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="dni" type="DniType" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

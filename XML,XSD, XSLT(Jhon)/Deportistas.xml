@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lista xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Deportistas.xsd">
+
+    <deportista dni="12345678A">
+        <nombre>Pablo</nombre>
+        <apellido>García</apellido>
+        <genero>Hombre</genero>
+        <edad>20</edad>
+        <ciudadNac>Madrid</ciudadNac>
+    </deportista>
+
+    <deportista dni="87654321B">
+        <nombre>Carlos</nombre>
+        <apellido>Martínez</apellido>
+        <genero>Hombre</genero>
+        <edad>27</edad>
+        <ciudadNac>Barcelona</ciudadNac>
+    </deportista>
+
+    <deportista dni="23456789C">
+        <nombre>Ana</nombre>
+        <apellido>Hernández</apellido>
+        <genero>Mujer</genero>
+        <edad>19</edad>
+        <ciudadNac>Valencia</ciudadNac>
+    </deportista>
+
+    <deportista dni="98765432D">
+        <nombre>Javier</nombre>
+        <apellido>Ruiz</apellido>
+        <genero>Mujer</genero>
+        <edad>31</edad>
+        <ciudadNac>Sevilla</ciudadNac>
+    </deportista>
+
+    <deportista dni="34567890E">
+        <nombre>María</nombre>
+        <apellido>Lopez</apellido>
+        <genero>Mujer</genero>
+        <edad>24</edad>
+        <ciudadNac>Bilbao</ciudadNac>
+    </deportista>
+
+</lista>

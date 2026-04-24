@@ -1,0 +1,56 @@
+body {
+    background: #f5f9fc;
+    font-family: system-ui, sans-serif;
+    color: #333;
+}
+
+.guide-header {
+    background: linear-gradient(90deg, #76cadb 0%, #14109c 100%);
+}
+
+.logo {
+    width: 45px;
+}
+
+.guide-card {
+    background: #fff;
+    border-radius: 20px;
+}
+
+.guide-title {
+    color: #004C8C;
+    font-weight: 700;
+}
+
+.guide-subtitle {
+    color: #00396b;
+    font-weight: 700;
+}
+
+.guide-text {
+    color: #555;
+    line-height: 1.6;
+}
+
+.guide-list {
+    list-style: none;
+    padding: 0;
+}
+
+.guide-list li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.guide-list li::before {
+    content: "✓";
+    color: #004C8C;
+    position: absolute;
+    left: 0;
+}
+
+.guide-footer {
+    background: #14109c;
+    color: #fff;
+}
