@@ -4,6 +4,8 @@ Se integro la api de manera parcial en la pagina web en la que usamos por el mom
 
 ## Jhon Salazar(API Deportista)
 
+Endpoint: http://localhost:8055/items/deportista
+
 Implemente la api de deportista en la seccion de administracion de la pagina web, la cual es accesible solo si cuentas con el permiso de organizacion.
 
 Por lo general, no hubo ningun contratiempo a la hora de agregar las funciones GET, POST, PATH, DELETE en la seccion de panel de organizador.
