@@ -1,31 +1,49 @@
-document.addEventListener("DOMContentLoaded", function() {
-    
+const URL = "http://localhost:8055/items/deportista";
+const TOKEN = "vnVQwn2R8ZL5zWsAFTu8MLhqYLMj-BJz";
+
+document.addEventListener("DOMContentLoaded", function () {
+
     const dniField = document.getElementById("dni");
-    const usuario = document.getElementById("usuario");
+    const nombreField = document.getElementById("nombre");
+    const apellidoField = document.getElementById("apellido");
+    const generoField = document.getElementById("genero");
+    const fechaField = document.getElementById("fecha");
+    const ciudadField = document.getElementById("ciudad");
+    const emailField = document.getElementById("email");
+    const telefonoField = document.getElementById("telefono");
+
     const contra = document.getElementById("contra");
-    const apellido = document.getElementById("apellido");
     const confirmcontra = document.getElementById("confirmcontra");
-    const fecha = document.getElementById("fecha");
-    const genero = document.getElementById("gender");
-    const ciudad = document.getElementById("ciudad");
-    const telefono = document.getElementById("phone");
-    const email = document.getElementById("Email");
-    const registrar = document.getElementById("registrarse");
 
     let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
-    registrar.addEventListener("click", async function(e) {
-        e.preventDefault(); 
+    document.getElementById("registrarse").addEventListener("click", async function (e) {
+        e.preventDefault();
 
-        const campos = [dniField, usuario, apellido, contra, confirmcontra, fecha, genero, telefono, email];
-        campos.forEach(campo => campo.classList.remove("is-invalid"));
+        const campos = [
+            dniField,
+            nombreField,
+            apellidoField,
+            contra,
+            confirmcontra,
+            fechaField,
+            generoField,
+            telefonoField,
+            emailField
+        ];
+
+        campos.forEach(campo => {
+            if (campo) campo.classList.remove("is-invalid");
+        });
 
         let valido = true;
-        let apellidoValue = apellido.value.trim();
+
+        let dniValue = dniField.value.trim();
+        let nombreValue = nombreField.value.trim();
+        let apellidoValue = apellidoField.value.trim();
         let password = contra.value.trim();
         let confirmPassword = confirmcontra.value.trim();
-        let emailValue = email.value.trim();
-        let dniValue = dniField.value.trim();
+        let emailValue = emailField.value.trim();
 
         const emailSymbol = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         const dniRegex = /^\d{8}[A-Za-z]$/;
@@ -35,22 +53,22 @@ document.addEventListener("DOMContentLoaded", function() {
             valido = false;
         }
 
-        if (!usuario.checkValidity()) {
-            usuario.classList.add("is-invalid");
+        if (nombreValue === "") {
+            nombreField.classList.add("is-invalid");
             valido = false;
         }
 
         if (apellidoValue === "") {
-            apellido.classList.add("is-invalid");
+            apellidoField.classList.add("is-invalid");
             valido = false;
         }
 
-        if (!contra.checkValidity()) {
+        if (password === "") {
             contra.classList.add("is-invalid");
             valido = false;
         }
 
-        if (!confirmcontra.checkValidity()) {
+        if (confirmPassword === "") {
             confirmcontra.classList.add("is-invalid");
             valido = false;
         }
@@ -61,23 +79,23 @@ document.addEventListener("DOMContentLoaded", function() {
             valido = false;
         }
 
-        if (!fecha.checkValidity()) {
-            fecha.classList.add("is-invalid");
+        if (fechaField.value === "") {
+            fechaField.classList.add("is-invalid");
             valido = false;
         }
 
-        if (!genero.checkValidity()) {
-            genero.classList.add("is-invalid");
+        if (generoField.value === "") {
+            generoField.classList.add("is-invalid");
             valido = false;
         }
 
-        if (!telefono.checkValidity()) {
-            telefono.classList.add("is-invalid");
+        if (telefonoField.value.trim() === "") {
+            telefonoField.classList.add("is-invalid");
             valido = false;
         }
 
-        if (!email.checkValidity() || !emailSymbol.test(emailValue)) {
-            email.classList.add("is-invalid");
+        if (!emailSymbol.test(emailValue)) {
+            emailField.classList.add("is-invalid");
             valido = false;
         }
 
@@ -85,65 +103,32 @@ document.addEventListener("DOMContentLoaded", function() {
 
         let deportista = {
             dni: dniValue,
-            nombre: usuario.value.trim(),
+            nombre: nombreValue,
             apellidos: apellidoValue,
-            contraseña: password,
-            fecha: fecha.value,
-            genero: genero.value,
-            ciudad: ciudad.value || "No especificada",
-            telefono: telefono.value.trim(),
+            contrasena: password,
+            fecha: fechaField.value,
+            genero: generoField.value,
+            ciudad: ciudadField.value || "No especificada",
+            telefono: telefonoField.value.trim(),
             email: emailValue,
             organizador: false
         };
 
-        usuarios.push(deportista);
-        localStorage.setItem("usuarios", JSON.stringify(usuarios));
-
-        alert("Registrado correctamente");
-        window.location.href = "../index.html"
-
-    });
-
-    /*
-    // 2da altertativa de insercion. Aqui se crea directamente el objeto con los valores de los inputs
-    // Su uso radica en solucionar el problema al realizar la request a la api
-    const registrar = document.getElementById("registrarse");
-
-    registrar.addEventListener("click", async function(e) {
-
-        e.preventDefault();
-
-        const deportista = {
-            dni: document.getElementById("dni").value.trim(),
-            nombre: document.getElementById("usuario").value.trim(),
-            apellidos: document.getElementById("apellido").value.trim(),
-            genero: document.getElementById("gender").value.trim(),
-            fecha: document.getElementById("fecha").value.trim(),
-            ciudad: document.getElementById("ciudad").value.trim(),
-            email: document.getElementById("Email").value.trim(),
-            telefono: document.getElementById("phone").value.trim()
-        };
-
-        try {
-            await insertarDeportista(deportista);
-        } catch (error) {
-            console.error(error);
+        if(await insertarDeportista(deportista)){
+            usuarios.push(deportista);
+            localStorage.setItem("usuarios", JSON.stringify(usuarios));
+            alert("Registrado correctamente");
+            window.location.href = "../index.html";
+        } else {
+            alert("Algo ha salido mal");
         }
 
-        console.log(deportista);
-
     });
-    */
 });
 
 
-// Metodo que inserta al nuevo deportista en la base de datos(tiene un error 400 en el campo "Apellidos": Contains null values)
-async function insertarDeportista(deportista){
-
-    const URL = "http://localhost:8055/items/deportista";
-    const TOKEN = "eFrBb1haBX1rAmdCp_iskR9qCjaWq-Op";
-
-    alert(deportista.dni);
+// Crea un nuevo registro en la base de datos
+async function insertarDeportista(deportista) {
 
     try {
         const res = await fetch(URL, {
@@ -156,6 +141,7 @@ async function insertarDeportista(deportista){
                 "DNI": deportista.dni,
                 "Nombre": deportista.nombre,
                 "Apellidos": deportista.apellidos,
+                "Contrasena": deportista.contrasena,
                 "Genero": deportista.genero,
                 "FechaNac": deportista.fecha,
                 "Ciudadnac": deportista.ciudad,
@@ -163,17 +149,18 @@ async function insertarDeportista(deportista){
                 "Telefono": deportista.telefono
             })
         });
+
         if (!res.ok) {
             const mensajeError = await res.json();
-            throw new Error("Error al llamar a la API: " + res.status + ":" + mensajeError.errors[0].message);
-        } else {
-            alert("Registro completo");
-            return true;
+            throw new Error(
+                "Error API: " + res.status + " - " + (mensajeError?.errors?.[0]?.message || "Error desconocido")
+            );
         }
+
+        return true;
 
     } catch (error) {
         alert(error.message);
-        console.log(error.message);
-        return false;
+        console.log(error);
     }
 }

@@ -34,14 +34,8 @@ document.addEventListener("DOMContentLoaded", function(){
         let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
         const fastLog = {
-            nombre: "user",
-            apellido: "surname",
-            contraseña: "1234",
-            fecha: "2004-08-13",
-            genero: "Male",
-            ciudad: "No especificada",
-            telefono: "1234567890",
-            email: "TestUser@gmail.com",
+            dni: "40000001A",
+            contrasena: "1234",
             organizador: true
         };
 
